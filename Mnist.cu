@@ -252,6 +252,8 @@ int main()
 			}
 		}
 		classification_error = (float)num_errors / (float)classifications;
+		double precision = classifications - classification_error;
+
 		cout<<"Error en el Testeo de :"<<classification_error*100.0<<"%  en "<<classifications<<" iteraciones."<<endl;
 	}
 	cudaFree(d_data);
